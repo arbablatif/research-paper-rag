@@ -1,0 +1,16 @@
+# Secrets — never commit
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local runtime data (rebuilt by ingest.py)
+chroma_db/
+.cache/
+data/uploads/
+
+# Sample papers are downloaded by scripts/download_papers.py (not redistributed)
+data/papers/*.pdf

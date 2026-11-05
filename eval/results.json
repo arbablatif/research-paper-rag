@@ -1,0 +1,253 @@
+{
+  "summary": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "n": 15,
+    "answer_accuracy": 0.8333333333333334,
+    "citation_correctness": 0.8333333333333334,
+    "citation_grounding": 0.9230769230769231,
+    "refusal_accuracy": 1.0,
+    "false_refusals": 1,
+    "overall_accuracy": 0.8666666666666667
+  },
+  "rows": [
+    {
+      "id": "q01",
+      "question": "In the Transformer, how many attention heads are used and what is the per-head key dimension?",
+      "answerable": true,
+      "answer": "The Transformer employs $h = 8$ parallel attention layers, or heads, and uses a per-head key dimension of $d_k = 64$ [attention_is_all_you_need.pdf, p. 5].",
+      "refused": false,
+      "citations": [
+        {
+          "doc": "attention_is_all_you_need.pdf",
+          "page": 5,
+          "grounded": true
+        }
+      ],
+      "top_hit": "attention_is_all_you_need.pdf p.5 (0.65)",
+      "correct": true,
+      "citation_correct": true
+    },
+    {
+      "id": "q02",
+      "question": "What value of warmup_steps was used for the Transformer learning rate schedule?",
+      "answerable": true,
+      "answer": "A warmup_steps value of 4000 was used for the learning rate schedule [attention_is_all_you_need.pdf, p. 7].",
+      "refused": false,
+      "citations": [
+        {
+          "doc": "attention_is_all_you_need.pdf",
+          "page": 7,
+          "grounded": true
+        }
+      ],
+      "top_hit": "attention_is_all_you_need.pdf p.7 (0.59)",
+      "correct": true,
+      "citation_correct": true
+    },
+    {
+      "id": "q03",
+      "question": "What BLEU score does the big Transformer achieve on WMT 2014 English-to-German?",
+      "answerable": true,
+      "answer": "The big Transformer model achieves a BLEU score of 28.4 on the WMT 2014 English-to-German translation task [attention_is_all_you_need.pdf, p. 8].",
+      "refused": false,
+      "citations": [
+        {
+          "doc": "attention_is_all_you_need.pdf",
+          "page": 8,
+          "grounded": true
+        }
+      ],
+      "top_hit": "attention_is_all_you_need.pdf p.8 (0.68)",
+      "correct": true,
+      "citation_correct": true
+    },
+    {
+      "id": "q04",
+      "question": "How long did it take to train the big Transformer model, and on what hardware?",
+      "answerable": true,
+      "answer": "The big Transformer model took 3.5 days to train on 8 P100 GPUs [attention_is_all_you_need.pdf, p. 8].",
+      "refused": false,
+      "citations": [
+        {
+          "doc": "attention_is_all_you_need.pdf",
+          "page": 8,
+          "grounded": true
+        }
+      ],
+      "top_hit": "attention_is_all_you_need.pdf p.8 (0.54)",
+      "correct": true,
+      "citation_correct": true
+    },
+    {
+      "id": "q05",
+      "question": "What are the default hyperparameter settings recommended for the Adam optimizer?",
+      "answerable": true,
+      "answer": "I could not find the answer in the provided sources.",
+      "refused": true,
+      "citations": [],
+      "top_hit": "adam_optimizer.pdf p.1 (0.56)",
+      "correct": false,
+      "citation_correct": false
+    },
+    {
+      "id": "q06",
+      "question": "Which optimizer corresponds to a version of Adam with beta1 = 0 and infinitesimal (1 - beta2)?",
+      "answerable": true,
+      "answer": "AdaGrad corresponds to a version of Adam with $\\beta_1 = 0$, infinitesimal $(1 - \\beta_2)$, and an annealed version of $\\alpha$ [adam_optimizer.pdf, p. 5].",
+      "refused": false,
+      "citations": [
+        {
+          "doc": "adam_optimizer.pdf",
+          "page": 5,
+          "grounded": true
+        }
+      ],
+      "top_hit": "adam_optimizer.pdf p.1 (0.59)",
+      "correct": true,
+      "citation_correct": true
+    },
+    {
+      "id": "q07",
+      "question": "What phenomenon does Batch Normalization aim to reduce?",
+      "answerable": true,
+      "answer": "Batch Normalization aims to achieve a stable distribution of activation values throughout training [batch_normalization.pdf, p. 8]. It also helps address issues in traditional deep networks where a too-high learning rate may cause gradients to explode or vanish, or get stuck in poor local minima [batch_normalization.pdf, p. 5].",
+      "refused": false,
+      "citations": [
+        {
+          "doc": "batch_normalization.pdf",
+          "page": 8,
+          "grounded": true
+        },
+        {
+          "doc": "batch_normalization.pdf",
+          "page": 5,
+          "grounded": true
+        }
+      ],
+      "top_hit": "batch_normalization.pdf p.5 (0.68)",
+      "correct": false,
+      "citation_correct": false
+    },
+    {
+      "id": "q08",
+      "question": "What top-5 test error did the ensemble of batch-normalized networks reach on ImageNet?",
+      "answerable": true,
+      "answer": "The ensemble of batch-normalized networks reached a 4.9% top-5 error on the ImageNet validation set, and a 4.82% top-5 error on the test set [batch_normalization.pdf, p. 8].",
+      "refused": false,
+      "citations": [
+        {
+          "doc": "batch_normalization.pdf",
+          "page": 8,
+          "grounded": true
+        }
+      ],
+      "top_hit": "batch_normalization.pdf p.8 (0.67)",
+      "correct": true,
+      "citation_correct": true
+    },
+    {
+      "id": "q09",
+      "question": "What top-5 error did the ResNet ensemble achieve on the ImageNet test set?",
+      "answerable": true,
+      "answer": "The ResNet ensemble achieved a top-5 error of 3.57% on the ImageNet test set [resnet.pdf, p. 6].",
+      "refused": false,
+      "citations": [
+        {
+          "doc": "resnet.pdf",
+          "page": 6,
+          "grounded": true
+        }
+      ],
+      "top_hit": "resnet.pdf p.6 (0.73)",
+      "correct": true,
+      "citation_correct": true
+    },
+    {
+      "id": "q10",
+      "question": "What problem with very deep plain networks does residual learning address?",
+      "answerable": true,
+      "answer": "Residual learning addresses the degradation problem, where deeper plain networks exhibit higher training and test errors as their depth increases, as well as making extremely deep networks easier to optimize [resnet.pdf, p. 2, 3].",
+      "refused": false,
+      "citations": [
+        {
+          "doc": "resnet.pdf",
+          "page": 2,
+          "grounded": true
+        },
+        {
+          "doc": "resnet.pdf",
+          "page": 3,
+          "grounded": false
+        }
+      ],
+      "top_hit": "resnet.pdf p.1 (0.65)",
+      "correct": true,
+      "citation_correct": true
+    },
+    {
+      "id": "q11",
+      "question": "How does WaveNet make modelling 16-bit audio samples tractable for its softmax output?",
+      "answerable": true,
+      "answer": "To make modeling 16-bit audio samples tractable, WaveNet applies a $\\mu$-law companding transformation to the data and quantizes it to 256 possible values [wavenet.pdf, p. 3].",
+      "refused": false,
+      "citations": [
+        {
+          "doc": "wavenet.pdf",
+          "page": 3,
+          "grounded": true
+        }
+      ],
+      "top_hit": "wavenet.pdf p.6 (0.66)",
+      "correct": true,
+      "citation_correct": true
+    },
+    {
+      "id": "q12",
+      "question": "What type of convolutions does WaveNet use to obtain very large receptive fields?",
+      "answerable": true,
+      "answer": "WaveNet uses dilated convolutions to increase the receptive field by orders of magnitude without greatly increasing computational cost [wavenet.pdf, p. 3].",
+      "refused": false,
+      "citations": [
+        {
+          "doc": "wavenet.pdf",
+          "page": 3,
+          "grounded": true
+        }
+      ],
+      "top_hit": "wavenet.pdf p.3 (0.61)",
+      "correct": true,
+      "citation_correct": true
+    },
+    {
+      "id": "q13",
+      "question": "What is the recommended baking temperature for sourdough bread?",
+      "answerable": false,
+      "answer": "I could not find the answer in the provided sources.",
+      "refused": true,
+      "citations": [],
+      "top_hit": "batch_normalization.pdf p.7 (0.17)",
+      "correct": true
+    },
+    {
+      "id": "q14",
+      "question": "What accuracy does the Vision Transformer (ViT-H/14) achieve on ImageNet?",
+      "answerable": false,
+      "answer": "I could not find the answer in the provided sources.",
+      "refused": true,
+      "citations": [],
+      "top_hit": "resnet.pdf p.12 (0.55)",
+      "correct": true
+    },
+    {
+      "id": "q15",
+      "question": "How many parameters does GPT-3 have?",
+      "answerable": false,
+      "answer": "I could not find the answer in the provided sources.",
+      "refused": true,
+      "citations": [],
+      "top_hit": "attention_is_all_you_need.pdf p.8 (0.30)",
+      "correct": true
+    }
+  ]
+}
