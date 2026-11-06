@@ -1,4 +1,4 @@
-# research-paper-rag
+# Research Paper RAG: Cited Question Answering over Engineering PDFs
 
 A retrieval-augmented generation (RAG) assistant that answers questions about a folder of engineering research PDFs. Every answer **cites the document and page** it came from. If the answer isn't in the sources, it **refuses**.
 
@@ -121,3 +121,14 @@ tests/           pytest suite
 - **Small eval.** 15 questions is a smoke test, not a benchmark. String-match scoring can miss correct paraphrases.
 - **Fixed similarity gate.** The 0.25 threshold was tuned by eye for MiniLM, and a different embedding model would need it re-tuned.
 - **Single-turn.** Follow-up questions don't use chat history for retrieval.
+
+## License
+
+The code is MIT licensed. See [LICENSE](LICENSE). Third-party datasets, papers and models are not covered and keep their own terms.
+
+## Related projects
+
+- [rag-evaluation-lab](https://github.com/arbablatif/rag-evaluation-lab): controlled comparison of RAG chunking, embeddings and top-k
+- [analytics-agent](https://github.com/arbablatif/analytics-agent): text-to-SQL agent with guardrails and cited answers
+
+Project page: [https://arbablatif.github.io/projects/research-paper-rag/](https://arbablatif.github.io/projects/research-paper-rag/). More work at [arbablatif.github.io](https://arbablatif.github.io/).

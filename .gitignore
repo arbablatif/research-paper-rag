@@ -14,3 +14,7 @@ data/uploads/
 
 # Sample papers are downloaded by scripts/download_papers.py (not redistributed)
 data/papers/*.pdf
+
+# Local workspace files, not part of the project
+CLAUDE.md
+.vscode/
