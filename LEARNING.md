@@ -1,7 +1,5 @@
 # LEARNING.md: How this works, in plain language
 
-This file explains the key ideas behind the project, so you can walk a client through it with confidence.
-
 ## 1. What is RAG?
 
 **Retrieval-Augmented Generation** means: *look it up first, then answer.*
